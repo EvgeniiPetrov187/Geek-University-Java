@@ -107,7 +107,7 @@ public class Main {
     public static void Matrix(int[][] matrix) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (i != 1 && j != 1) {
+                if ((i != 1 && j != 1) || (i ==1 && j==1)) {
                     matrix[i][j] = 1;
                 }
                 System.out.print(matrix[i][j] + " ");
