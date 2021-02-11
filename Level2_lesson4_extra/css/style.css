@@ -1,0 +1,10 @@
+.button:hover {
+    -fx-background-color: grey;
+}
+.root {
+    -fx-background-image: url("img/photo.jpg");
+    -fx-opacity: 0.9;
+}
+#input #output {
+    -fx-opacity: 0.9;
+}

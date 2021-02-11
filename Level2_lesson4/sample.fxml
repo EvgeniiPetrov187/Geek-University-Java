@@ -1,0 +1,38 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuItem?>
+<?import java.net.URL?>
+
+<AnchorPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" >
+
+    <MenuBar AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <Menu text="Чат">
+            <MenuItem text="Очистить чат" onAction="#clearChat"/>
+        </Menu>
+    </MenuBar>
+
+    <TextArea fx:id="textArea" VBox.vgrow="ALWAYS" maxHeight="450" maxWidth="250" AnchorPane.topAnchor="50"
+              AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.bottomAnchor="100"/>
+
+    <HBox fx:id="box" xmlns:fx="http://javafx.com/fxml" alignment="center" AnchorPane.bottomAnchor="30"
+          AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+        <TextField fx:id="textField" VBox.vgrow="ALWAYS" onAction="#btnOneClickAction" />
+        <Button fx:id="btn" text="Отправить" minWidth="100" onAction="#btnOneClickAction" />
+    </HBox>
+
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import java.net.URL?>
+
+<GridPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml"  alignment="center" hgap="20" vgap="30">
+
+    <MenuBar GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <Menu text="Перевести из:" >
+            <MenuItem fx:id="inputMenu1" text="метр" onAction="#writeIn1"/>
+            <MenuItem fx:id="inputMenu2" text="километр" onAction="#writeIn2"/>
+            <MenuItem fx:id="inputMenu3" text="миля" onAction="#writeIn3"/>
+            <MenuItem fx:id="inputMenu4" text="ярд" onAction="#writeIn4"/>
+        </Menu>
+    </MenuBar>
+    <MenuBar GridPane.rowIndex="0" GridPane.columnIndex="1">
+        <Menu text="Перевести в:" >
+            <MenuItem fx:id="outputMenu1" text="метр" onAction="#writeOut1"/>
+            <MenuItem fx:id="outputMenu2" text="километр" onAction="#writeOut2"/>
+            <MenuItem fx:id="outputMenu3" text="миля" onAction="#writeOut3"/>
+            <MenuItem fx:id="outputMenu4" text="ярд" onAction="#writeOut4"/>
+        </Menu>
+    </MenuBar>
+
+
+    <TextField fx:id="need" VBox.vgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="become" VBox.vgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <TextField fx:id="input" VBox.vgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="output" VBox.vgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+
+    <Button text="Перевод" minWidth="100" onAction="#btnOneClickAction" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Button text="Очистить поле" minWidth="100" onAction="#clearChat" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+
+</GridPane>
